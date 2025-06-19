@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Employee;
 use Illuminate\Http\Request;
 
-class EmployeeController extends Controller
+class AuthController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $employees = Employee::all();
-        return view('employee.index', compact('employees'));
+        return view('auth.login');
     }
 
     /**
@@ -45,7 +43,7 @@ class EmployeeController extends Controller
      */
     public function edit(string $id)
     {
-        return redirect()->back()->with('success', 'El registro se actualizó correctamen)te.';
+        //
     }
 
     /**
@@ -61,6 +59,6 @@ class EmployeeController extends Controller
      */
     public function destroy(string $id)
     {
-        return redirect()->back()->with('success', 'El registro se eliminó correctamente.');
+        //
     }
 }
