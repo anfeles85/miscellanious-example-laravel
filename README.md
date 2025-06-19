@@ -28,22 +28,22 @@ Esto es un ejemplo con las instrucciones para trabjar el proyecto localmente. Pa
   composer install
   ```
 
-2. Luego para recrear la base de datos, ejecute el comando:
-  ```sh
-  php artisan migrate:fresh --seed
-  ```
+2. Luego para recrear la base de datos, ejecute el archivo bdkeys.sql que se encuentra en la carpeta BD del repositorio:
+  
 
 
 ## Features
 
 -   Consulta el listado de empleados
 -   Mensajes con [sweetalert 2][sweetalert2-url]
+-	Reset de contraseña con envío de correo
 -   HTML template: argon-dashboard by Creative Tim
 
 ## Built With
 
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![MySQL][MySQL.com]][MySQL-url]
 
 
 ## Authors
@@ -69,3 +69,5 @@ Project Link: [https://github.com/anfeles85/miscellanious-example-laravel](https
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [sweetalert2-url]: https://sweetalert2.github.io/
+[MySQL-url]: https://www.mysql.com/
+[MySQL.com]: https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white
