@@ -27,12 +27,18 @@
                                 <td class="align-middle text-center">{{ $employee["fullname"] }}</td>
                                 <td class="align-middle text-center">{{ $employee["address"] }}</td>
                                 <td class="align-middle text-center">{{ $employee["phone"] }}</td>
-                                <td class="align-middle text-center">                                    
-                                    <a href="{{ route('employee.edit', $employee["document"]) }}" class="btn btn-info btn-circle btn-sm" title="Editar">
+                                <td class="align-middle text-center">  
+                                    <a href="#" id="show_{{ $employee['document'] }}" title="Ver" data-bs-toggle="modal" data-bs-target="#informationModal_{{ $employee['document'] }}">
+                                        <button type="button" class="btn btn-secondary btn-circle btn-sm">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </a>                                    
+                                    
+                                    <a href="{{ route('employee.edit', $employee['document']) }}" class="btn btn-info btn-circle btn-sm" title="Editar">
                                         <i class="far fa-edit"></i>
                                     </a>
 
-                                    <form id="form-delete-{{ $employee['document'] }}" action="{{ route('employee.destroy', $employee["document"]) }}"
+                                    <form id="form-delete-{{ $employee['document'] }}" action="{{ route('employee.destroy', $employee['document']) }}"
                                           method="post" style="padding:0;margin:0">
                                         @csrf
                                         @method('DELETE')
@@ -43,6 +49,30 @@
                                         </button>
                                     </form>                                       
                                 </td>
+                                <!-- modal Ver -->
+                                <div class="modal fade" id="informationModal_{{ $employee['document'] }}" tabindex="-1" role="dialog" 
+                                    aria-labelledby="informationModalLabel" aria-hidden="true" >
+                                    <div class="modal-dialog modal-dialog-left" role="document" style="margin-top: 150px;">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="informationModalLabel">Detalle del empleado</h5>
+                                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close">
+                                                    <span>&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p><strong>Documento:</strong> {{ $employee["document"] }}</p>
+                                                <p><strong>Nombre:</strong> {{ $employee["fullname"] }}</p>
+                                                <p><strong>Dirección:</strong> {{ $employee["address"] }}</p>
+                                                <p><strong>Teléfono:</strong> {{ $employee["phone"] }}</p>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </tr>
                         @endforeach
                     </tbody>

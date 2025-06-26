@@ -45,7 +45,7 @@ class EmployeeController extends Controller
      */
     public function edit(string $id)
     {
-        return redirect()->back()->with('success', 'El registro se actualizó correctamen)te.';
+        return redirect()->back()->with('success', 'El registro se actualizó correctamen');
     }
 
     /**
