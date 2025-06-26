@@ -15,6 +15,7 @@
   <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-svg.css" rel="stylesheet" />  
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ asset('css/argon-dashboard.css?v=2.1.0') }}" rel="stylesheet" />
+ 
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -53,7 +54,7 @@
 
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('js/argon-dashboard.min.js?v=2.1.0')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
 
     @yield('scripts')
 </body>
