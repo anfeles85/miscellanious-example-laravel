@@ -38,9 +38,12 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <select name="type_id" id="type_id">
+                            <select name="type_id" id="type_id" class="form-control js-example-placeholder-single">
                                 <option value="1">INSTRUCTOR</option>
                                 <option value="2">COORDINADOR</option>
+                                <option value="3">FUNCIONARIO</option>
+                                <option value="4">SERVICIOS VARIOS</option>
+                                <option value="5">GUARDA</option>
                             </select>
                         </div>
                     </div>
@@ -50,11 +53,22 @@
                         <button class="btn btn-success">Aceptar</button>                      
                     </div>
                     <div class="col-md-6 d-grid">                       
-                        <button class="btn btn-secondary">Cancelar</button>                        
+                        <a href="{{ route('employee.index') }}" class="btn btn-secondary">Cancelar</a>                        
                     </div>
                 </div>
             </form>
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+            $('.js-example-placeholder-single').select2({
+                placeholder: "Seleccione",
+                allowClear: true
+            });
+        });
+    </script>
 @endsection
