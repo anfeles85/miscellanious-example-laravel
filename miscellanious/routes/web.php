@@ -25,6 +25,7 @@ Route::get('/', function () {
 Route::prefix('employee')->group(function(){
     Route::get('/index', [EmployeeController::class, 'index'])->name('employee.index');
     Route::get('/edit/{id}', [EmployeeController::class, 'edit'])->name('employee.edit');
+    Route::get('/create', [EmployeeController::class, 'create'])->name('employee.create');
     Route::delete('/destroy/{id}', [EmployeeController::class, 'destroy'])->name('employee.destroy');
 });
 

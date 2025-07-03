@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
+use App\Models\EmployeeType;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -21,7 +22,8 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        $types = EmployeeType::all();
+        return view('employee.create', compact('types'));
     }
 
     /**

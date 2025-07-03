@@ -6,6 +6,7 @@
     <div class="card mb-4">
         <div class="card-header pb-0">
             <h6>Lista de Empleados</h6>
+            <a href="{{ route('employee.create') }}" class="btn btn-primary">Crear</a>
         </div>
 
         <div class="card-body px-0 pt-0 pb-2">
