@@ -2,7 +2,7 @@
 # miscellanious-example-laravel
 
 
-Proyecto con varios elementos de ejemplo a incluir en proyecto laravel, como por ejemplo implementación de librería JS SweetAlert2 en vistas de Laravel. Entre otros.
+Proyecto con varios elementos de ejemplo a incluir en proyecto Laravel, como por ejemplo implementación de librería JS SweetAlert2 en vistas de Laravel. Entre otros.
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ Esto es un ejemplo con las instrucciones para trabjar el proyecto localmente. Pa
   composer install
   ```
 
-2. Luego para recrear la base de datos, ejecute el archivo bdkeys.sql que se encuentra en la carpeta BD del repositorio:
+2. Luego para recrear la base de datos, ejecute el archivo bdkeys.sql que se encuentra en la carpeta BD del repositorio
   
 
 
@@ -36,7 +36,8 @@ Esto es un ejemplo con las instrucciones para trabjar el proyecto localmente. Pa
 
 -   Consulta el listado de empleados
 -   Mensajes con [sweetalert 2][sweetalert2-url]
--	Reset de contraseña con envío de correo
+-   Reset de contraseña con envío de correo
+-   Scheduled jobs con comandos personalizados
 -   HTML template: argon-dashboard by Creative Tim
 
 ## Built With
