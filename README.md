@@ -36,8 +36,8 @@ Esto es un ejemplo con las instrucciones para trabjar el proyecto localmente. Pa
 
 -   Consulta el listado de empleados
 -   Mensajes con [sweetalert 2][sweetalert2-url]
--	  Reset de contraseña con envío de correo
--	  Scheduled jobs con comandos personalizados
+-   Reset de contraseña con envío de correo
+-   Scheduled jobs con comandos personalizados
 -   HTML template: argon-dashboard by Creative Tim
 
 ## Built With
