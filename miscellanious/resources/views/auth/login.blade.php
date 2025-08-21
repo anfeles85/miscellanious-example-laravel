@@ -28,17 +28,33 @@
                                 <div class="card-header pb-0 text-start">
                                     <h4 class="font-weight-bolder">Ingreso</h4>
                                     <p class="mb-0">Digita tu correo y contraseña para ingresar</p>
+                                    @if (count($errors) > 0)
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="card-body">
-                                    <form role="form">
+                                    <form role="form" action="{{ route('auth.login') }}" method="POST">
+                                        @csrf
                                         <div class="mb-3">
-                                            <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email">
+                                            <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email">
                                         </div>
                                         <div class="mb-3">
-                                            <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password">
+                                            <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password">
                                         </div>                                        
                                         <div class="text-center">
-                                            <button type="button" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Aceptar</button>
+                                            <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Aceptar</button>
+                                        </div>
+                                        <div class="text-center pt-3">
+                                            <div class="form-group">
+                                                {!! NoCaptcha::renderJs() !!}
+                                                {!! NoCaptcha::display() !!}
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -97,6 +113,18 @@
             });
         </script>
     @endif
+
+    @if(session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: '¡Error!',
+                text: '{{ session('error') }}',
+                confirmButtonColor: '#d33',
+                confirmButtonText: 'OK'
+            });
+        </script>
+    @endif
 
     
 </body>
