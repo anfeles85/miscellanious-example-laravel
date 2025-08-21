@@ -38,6 +38,7 @@ Esto es un ejemplo con las instrucciones para trabjar el proyecto localmente. Pa
 -   Mensajes con [sweetalert 2][sweetalert2-url]
 -   Reset de contraseña con envío de correo
 -   Scheduled jobs con comandos personalizados
+-   Captcha con reCaptcha de Google
 -   HTML template: argon-dashboard by Creative Tim
 
 ## Built With
